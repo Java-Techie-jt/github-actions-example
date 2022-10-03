@@ -24,11 +24,10 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn clean install
-
     - name: Build & push Docker image
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
-        image: javatechie/springboot-images-new
+        image: bin4nithu@gmail.com/springboot-autoimage
         tags: latest
         registry: docker.io
         dockerfile: Dockerfile
