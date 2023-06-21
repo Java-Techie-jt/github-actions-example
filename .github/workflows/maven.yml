@@ -28,6 +28,7 @@ jobs:
   docker:
     uses: devopsnishu/Reusable-Action/.github/workflows/reusable.yml@main
     with:
+      dockerfile: Dockerfile
       image_name: my-awesome-app
     
     secrets:
