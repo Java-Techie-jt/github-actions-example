@@ -24,5 +24,12 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn clean install
-
+  docker:
+    uses: devopsnishu/Reusable-Action/.github/workflows/reusable.yml@main
+    with:
+      image_name: my-awesome-app
     
+    secrets:
+      DOCKERHUB_USERNAME: ${{secrets.DOCKERHUB_USERNAME}}
+      DOCKERHUB_PASSWORD: ${{secrets.DOCKERHUB_PASSWORD}}
+ 
