@@ -22,15 +22,18 @@ jobs:
         java-version: '1.8'
         distribution: 'adopt'
         cache: maven
+        
     - name: Build with Maven
       run: mvn clean install
-     
+    - name: Unit Tests
+      run: mvn -B test --file pom.xml
   docker:
     uses: devopsnishu/Reusable-Action/.github/workflows/reusable.yml@main
     with:
-      dockerfile: Dockerfile
+      
       image_name: my-awesome-app
-    
+      tags: latest
+      dockerfile: Dockerfile
     secrets:
       DOCKERHUB_USERNAME: ${{secrets.DOCKERHUB_USERNAME}}
       DOCKERHUB_PASSWORD: ${{secrets.DOCKERHUB_PASSWORD}}
