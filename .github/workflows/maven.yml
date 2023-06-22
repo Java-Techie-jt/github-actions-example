@@ -28,7 +28,7 @@ jobs:
     - name: Unit Tests
       run: mvn -B test --file pom.xml
   docker:
-    uses: devopsnishu/JAVA/.github/workflows/Reusable.yml@master
+    uses: devopsnishu/Reusable-Action/.github/workflows/reusable.yml@main
     with:
   
       image_name: Javafile1
