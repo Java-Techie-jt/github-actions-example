@@ -28,11 +28,11 @@ jobs:
     - name: Unit Tests
       run: mvn -B test --file pom.xml
   docker:
-    uses: devopsnishu/Reusable-Action/.github/workflows/reusable.yml@main
+    uses: devopsnishu/JAVA/.github/workflows/Reusable.yml@master
     with:
   
       image_name: Javafile
-      docker: ./Dockerfile
+  
    
     secrets:
       DOCKERHUB_USERNAME: ${{secrets.DOCKERHUB_USERNAME}}
