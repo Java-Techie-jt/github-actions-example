@@ -30,8 +30,8 @@ jobs:
   docker:
     uses: devopsnishu/Reusable-Action/.github/workflows/reusable.yml@main
     with:
-      
-      image_name: my-awesome-app
+  
+      image_name: Javafile
    
     secrets:
       DOCKERHUB_USERNAME: ${{secrets.DOCKERHUB_USERNAME}}
