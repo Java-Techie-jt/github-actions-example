@@ -31,7 +31,7 @@ jobs:
     uses: devopsnishu/JAVA/.github/workflows/Reusable.yml@master
     with:
   
-      image_name: Javafile
+      image_name: Javafile1
   
    
     secrets:
