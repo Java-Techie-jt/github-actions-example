@@ -37,7 +37,7 @@ jobs:
     
       with:
         image: prasad231/java-maven
-        tags: v2
+        tags: v3
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
