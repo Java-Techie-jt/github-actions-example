@@ -20,7 +20,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - name: Check out code
+      uses: actions/checkout@v3
+      
     - name: Set up JDK 17
       uses: actions/setup-java@v3
       with:
@@ -29,3 +31,14 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn clean install
+
+    - name: Build & push Docker image
+      uses: mr-smithers-excellent/docker-build-push@v6
+    
+      with:
+        image: prasad231/java-maven
+        tags: v1, latest
+        registry: Docker.io
+        dockerfile: Dockerfile
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
